@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+			
+<mapper namespace="UserMapper">
+
+
+
+  	<resultMap type="user" id="userSelectMap">
+		<result property="id" column="id" jdbcType="VARCHAR"/>
+		<result property="pw" column="pw" jdbcType="VARCHAR"/>
+		<result property="email" column="email" jdbcType="VARCHAR"/>
+		<result property="userName" column="user_name" jdbcType="VARCHAR"/>
+		<result property="tel" column="tel" jdbcType="VARCHAR"/>
+	</resultMap>  	
+  	
+  	
+  	<insert id="addUser"	parameterType="user">
+  		INSERT	
+  			INTO tb_user(user_no, id, pw, email, user_name, tel)
+  			VALUES(seq_tb_user_user_no.nextval, #{id}, #{pw}, #{email}, #{userName}, #{tel})
+  						
+  	</insert> 
+  	
+  	 <select id="getUser" parameterType="string"	resultMap="userSelectMap">
+		SELECT
+			id, pw, email, user_name, tel 		
+			FROM tb_user 
+				WHERE id = #{value}
+	 </select>
+
+
+  	
+  	
+</mapper>

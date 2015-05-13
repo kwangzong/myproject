@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+  
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div style="height:550px; width:100%; ">
+	<div class="row">
+        <div class="col-sm-12">
+            <legend><b>지출 추가</b></legend>
+        </div>
+	
+        <!-- panel preview -->
+        <div class="col-sm-5">
+            <h4>Add payment:</h4>
+            <div class="panel panel-default">
+                <div class="panel-body form-horizontal payment-form">
+					   <div class="form-group">
+                        <label for="status" class="col-sm-3 control-label">지출용도</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="status" name="status">
+                                <option>식        비</option>
+                                <option>교  통  비</option>
+								<option>의  류  비</option>
+								<option>통  신  비</option>
+								<option>교        육</option>
+								<option>기        타</option>
+                            </select>
+                        </div>
+                    </div> 
+					   <div class="form-group">
+                        <label for="status" class="col-sm-3 control-label">결제수단</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="status" name="status">
+                                <option>신용카드</option>
+                                <option>현        금</option>
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="concept" class="col-sm-3 control-label">영  수  증</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="concept" name="concept">
+							<button type="button" class="btn btn-default preview-add-button">
+								 <span class="glyphicon glyphicon-plus"></span> 파일찾기
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="col-sm-3 control-label">날      짜</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="description" name="description">
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="amount" class="col-sm-3 control-label">상  호  명</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="amount" name="amount">
+                        </div>
+                    </div>
+                 
+                    <div class="form-group">
+                        <label for="date" class="col-sm-3 control-label">금     액</label>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" id="date" name="date">
+                        </div>
+                    </div>   
+                    <div class="form-group">
+                        <div class="col-sm-12 text-right">
+                            <button type="button" class="btn btn-default preview-add-button">
+                                <span class="glyphicon glyphicon-plus"></span> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div> <!-- / panel preview -->
+        <div class="col-sm-7">
+            <h4>Preview:</h4>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="table-responsive">
+                        <table class="table preview-table">
+                            <thead>
+                                <tr>
+                                    <th>지출용도</th>
+                                    <th>결제수단</th>
+                                    <th>영  수  증</th>
+                                    <th>날        짜</th>
+                                    <th>상  호  명</th>
+									<th>금        액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+							<thead>
+                                <tr>
+                                    <th>식        비</th>
+                                    <th>신용카드</th>
+                                    <th>      예</th>
+                                    <th>2015-04-30</th>
+                                    <th>(주)이마트</th>
+									<th>25000원</th>
+                                </tr>
+                            </thead>
+							</tbody> <!-- preview content goes here-->
+                        </table>
+                    </div>                            
+                </div>
+            </div>
+            <div class="row text-right">
+                <div class="col-xs-12">
+                    <h4>Total: <strong><span class="preview-total">25000원</span></strong></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <hr style="border:1px dashed #dddddd;">
+                    <button type="button" class="btn btn-primary btn-block">입력 완료</button>
+                </div>                
+            </div>
+        </div>
+	</div>
+	</div>
+</body>
+</html>
